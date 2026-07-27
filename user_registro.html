@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registro</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a href="index.html" style="width: 20%;">
+                    <img src="Imagenes/Cinemark Hoyts logo.png" class="logo" style="width: 100%; padding-left: 10px;">
+                </a>
+            </div>
+        </nav>
+        
+        <div class="container-registro">
+            <img src="Imagenes/background.png" alt="" class="bg-user">
+            <div class="cont-user2">
+                <i class="fa-solid fa-circle-user log-user"></i>
+                <p class="text-reg">Registro</p>
+                <form id="registroForm" class="form-user">
+                    <label for="nombre">Nombre de usuario</label>
+                    <input type="text" name="nombre" required class="data-user">
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required class="data-user">
+                    <br>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" required class="data-user">
+                    <br>
+                    <div id="registroAviso" class="login-error" style="display:none; color:#ff4e2f; margin-bottom:10px; max-width: 300px;"></div>
+                    <input type="submit" value="Registrarse" class="registro-user">
+                </form>
+                <div class="registrarme">
+                    <p class="fs-7">¿Ya tenes cuenta?</p>
+                    <a href="login.html">Ingresar</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("registroForm").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const aviso = document.getElementById("registroAviso");
+                aviso.innerHTML = 'El registro está deshabilitado: esta demo usa una única cuenta (usuario <strong>admin</strong>, contraseña <strong>admin123</strong>). <a href="login.html">Iniciar sesión</a>';
+                aviso.style.display = "block";
+            });
+        </script>
+    </body>
+
+</html>
