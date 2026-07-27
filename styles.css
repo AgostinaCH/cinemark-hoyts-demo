@@ -647,6 +647,31 @@ h2{
   align-self: flex-end;
   font-size: 20px;
 }
+.panel-acciones{
+  display: flex;
+  gap: 15px;
+  z-index: 3;
+  margin-top: 15px;
+}
+.panel-btn{
+  min-width: 160px;
+  height: 35px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #500000;
+  background-color: #ffc400;
+  white-space: nowrap;
+}
+.panel-btn-secundario{
+  background-color: #eeeeee;
+}
 .registrarme{
   display: flex;
   flex-direction: row;
